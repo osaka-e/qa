@@ -53,7 +53,7 @@ function createIcon(type) {
 
 // ====== スプレッドシートから単元データ取得 ======
 async function fetchQuizUnits() {
-    const res = await fetch(API_URL);
+    const res = await fetch('https://script.google.com/macros/s/AKfycbzvFhpsGqBFDY4t_z916nEA9reD4T78qj3-iA9-wIMOjAYm7NyiyTKKmYDwsQhEqusx/exec');
     const data = await res.json();
 
     // 単元ごとにまとめる
@@ -197,7 +197,7 @@ async function handleAnswerSelect(question, answerIndex){
 
     // POST
     try{
-        await fetch(API_URL, {
+        await fetch('https://script.google.com/macros/s/AKfycbzvFhpsGqBFDY4t_z916nEA9reD4T78qj3-iA9-wIMOjAYm7NyiyTKKmYDwsQhEqusx/exec', {
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body: JSON.stringify({
